@@ -1,0 +1,3 @@
+SHop jo hai woh "/" root route ha us ka route shop.route.js main handle kia hoa hai
+
+Shop matlab  "/" route per woh products show hon ga jo add product se add hongay us key liay shop ko add products se product ka access chahiay 
