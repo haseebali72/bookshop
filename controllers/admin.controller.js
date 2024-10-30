@@ -1,5 +1,5 @@
 const { where } = require('sequelize');
-const Product = require('../models/product');
+const Product = require('../models/product.model');
 
 
 //a get request to render the add-product page
