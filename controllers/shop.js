@@ -5,10 +5,10 @@ const Cart = require('../models/cart');
 exports.getProducts = (req, res, next) => {
   Product.findAll()
   .then(products => {
-    res.render('admin/products', {
+    res.render('shop/product-list', {
       prods: products,
       pageTitle: 'Admin Products',
-      path: '/admin/products'
+      path: '/products'
     });
   })
   .catch(err => {
@@ -20,10 +20,10 @@ exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   console.log(prodId)
   Product.findByPk(prodId)
-  .then(([product]) => {
+  .then((product) => {
     // console.log(product)
     res.render('shop/product-detail', {
-      product: product[0],
+      product: product,
       pageTitle: product.title,
       path: '/products'
     });
@@ -34,10 +34,10 @@ exports.getProduct = (req, res, next) => {
 exports.getIndex = (req, res, next) => {
   Product.findAll()
   .then(products => {
-    res.render('admin/products', {
+    res.render('shop/index', {
       prods: products,
-      pageTitle: 'Admin Products',
-      path: '/admin/products'
+      pageTitle: 'Shop',
+      path: '/'
     });
   })
   .catch(err => {
