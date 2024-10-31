@@ -23,10 +23,9 @@ exports.postAddProduct = (req, res, next) => {
     imageUrl: imageUrl,
     description: description
   })
-    .then()
-    .catch()
+    .then(result => res.redirect('/'))
+    .catch(err => console.log(err))
 
-  res.redirect('/');
 };
 
 // get request to render the edit product page
