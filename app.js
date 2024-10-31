@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const errorController = require('./controllers/error');
+const errorController = require('./controllers/error.controller');
 const sequelize = require("./util/database") 
 
 const app = express();
@@ -11,8 +11,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+const adminRoutes = require('./routes/admin.route');
+const shopRoutes = require('./routes/shop.route');
 
 // db.execute('SELECT * FROM products')
 //   .then(result => console.log(result[0][0].title))
